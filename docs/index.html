@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>RPKI Relying Party Study</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<style>
+/* Bootstrap overrides */
+body {
+  /*min-height: 1000px;*/
+  padding-top: 70px;
+}
+
+.navbar-default {
+  height: 65px;
+}
+
+.navbar-default
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 65px;
+  font-size: 18pt;
+}
+
+.navbar-nav > li > a {
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 65px;
+  font-size: 16pt;
+}
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<!-- Additional files for the Highslide popup effect -->
+<script src="https://www.highcharts.com/media/com_demo/js/highslide-full.min.js"></script>
+<script src="https://www.highcharts.com/media/com_demo/js/highslide.config.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="https://www.highcharts.com/media/com_demo/css/highslide.css" />
+
+
+<script>
+	// Get the CSV and create the chart
+	//$.getJSON('based.json', function (chart) {
+	//	Highcharts.chart('plot', chart);
+	//});
+  $.getJSON('corr.json', function (chart) {
+		Highcharts.chart('plotcorr', chart);
+	});
+  $.getJSON('daytoday.json', function (chart) {
+    Highcharts.chart('plotdaytoday', chart);
+	});
+
+</script>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <a href="index.html" class="navbar-brand">RPKI Relying Party Study</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav ">
+                  <li><a href="#about">About</a></li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
+    <div class="container">
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+        <div class="page-header">
+
+<h2 id="about">About this Study</h2>
+<p style="font-size: 16px">
+On this page you will find all artifacts of the ACM IMC 2020 paper:
+<ul>
+<li>
+John Kristoff, Randy Bush, Chris Kanich, George Michaelson, Amreesh Phokeer, Thomas C. Schmidt, Matthias W&auml;hlisch, <i>On Measuring RPKI Relying Parties</i>, In: Proc. of ACM Internet Measurement Conference (IMC), New York: ACM, 2020. 
+  <br/> <br/>
+<b>Absstract:</b> In this paper, we introduce a framework to observe RPKI relying parties (i.e., those that fetch RPKI data from the distributed repository) and present insights into this ecosystem for the first time. Our longitudinal study of data gathered from three RPKI certificate authorities (AFRINIC, APNIC, and our own CA) identifies different deployment models of relying parties and (surprisingly) larger inconsistent fetching behavior, which might affect robustness in Internet routing. Our results reveal that some relying parties are not able to connect to specific publication points at all.
+</li>
+</ul>
+
+Stay tuned until ACM IMC 2020 starts.
+</p>
+
+        </div>  <!-- page-header -->
+    </div>  <!-- col -->
+  </div>  <!-- row -->
+
+    </div> <!-- /container -->
+
+</body>
+</html>

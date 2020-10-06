@@ -57,7 +57,7 @@ body {
 	//$.getJSON('based.json', function (chart) {
 	//	Highcharts.chart('plot', chart);
 	//});
-  $.getJSON('https://rp-study.rpki.net/corr.json', function (chart) {
+  $.getJSON('corr.json', function (chart) {
 		Highcharts.chart('plotcorr', chart);
 	});
   //$.getJSON('daytoday.json', function (chart) {
@@ -99,8 +99,29 @@ On this page you find all artifacts of the <a href="https://conferences.sigcomm.
   <p>John Kristoff, Randy Bush, Chris Kanich, George Michaelson, Amreesh Phokeer, Thomas C. Schmidt, Matthias W&auml;hlisch, <i>On Measuring RPKI Relying Parties</i>, In: Proc. of ACM Internet Measurement Conference (IMC), New York: ACM, 2020. 
   </p>
 
-  <p> <b>Absstract:</b> In this paper, we introduce a framework to observe RPKI relying parties (i.e., those that fetch RPKI data from the distributed repository) and present insights into this ecosystem for the first time. Our longitudinal study of data gathered from three RPKI certification authorities (AFRINIC, APNIC, and our own CA) identifies different deployment models of relying parties and (surprisingly) prevalent inconsistent fetching behavior that affects Internet routing robustness. Our results reveal nearly 90% of relying parties are unable to connect to delegated publication points under certain conditions, which leads to erroneous invalidation of IP prefixes and likely widespread loss of network reachability.
+
+  <p> <b>Abstract:</b> In this paper, we introduce a framework to observe RPKI relying parties (i.e., those that fetch RPKI data from the distributed repository) and present insights into this ecosystem for the first time. Our longitudinal study of data gathered from three RPKI certification authorities (AFRINIC, APNIC, and our own CA) identifies different deployment models of relying parties and (surprisingly) prevalent inconsistent fetching behavior that affects Internet routing robustness. Our results reveal nearly 90% of relying parties are unable to connect to delegated publication points under certain conditions, which leads to erroneous invalidation of IP prefixes and likely widespread loss of network reachability.
   </p>
+
+  <p>
+    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    BibTeX
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+     <pre><code>
+@inproceedings{kbkmp-mrrp-20,
+  author = {John Kristoff and Randy Bush and Chris Kanich and George Michaelson and Amreesh Phokeer and Thomas C. Schmidt and Matthias W{\"a}hlisch},
+  title = {{On Measuring RPKI Relying Parties}},
+  booktitle = {Proc. of ACM Internet Measurement Conference (IMC)},
+  year = {2020},
+  publisher = {ACM},
+  address = {New York},
+}
+      </code></pre>
+    </div>
+  </div>
 </div>
 
 

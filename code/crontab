@@ -1,0 +1,19 @@
+PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/usr/local/lib64
+
+# m h  dom mon dow   command
+
+# process PP log data and insert into the database
+
+0  4 * * *  /net/data/rpki/bin/rpkilogs-ca.rg.net-rrdp.sh
+30 4 * * *  /net/data/rpki/bin/rpkilogs-ca.rg.net-rsync.sh
+
+# purge old RIB/MRT and PyASN .dat files
+0 19 * * *  /net/data/rpki/bin/purge-old-pyasn.sh
+
+# get the latest MRT RIB and upate /net/data/rpkit/pyasn/pyasn.current.dat
+5  19 * * *  ~/bin/refresh-pyasn-dat.sh
+
+# retrieve publication point logs daily
+20 20 * * *  /net/data/rpki/bin/pp-sync-rsync.sh -d /net/data/rpki/pp/ca.rg.net/rrdp -r ca.rg.net ca.rg.net:/var/log/apache2/access.log*
+30 20 * * *  /net/data/rpki/bin/pp-sync-rsync.sh -d /net/data/rpki/pp/ca.rg.net/rsync -r ca.rg.net ca.rg.net:/var/log/rsync/rsync.log*

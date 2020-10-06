@@ -1,0 +1,4 @@
+database: rpkilog
+measurement: connect
+tags: pp,protocol,asn
+fields: saddr,ua,file,ptr

@@ -28,4 +28,4 @@ apprproriate.
 * [notebooks](notebooks)
   A directory of Juypter notebooks and data used to produce the graphs
   in the IMC 2020 [On Measuring RPKI Relying
-  Partiess(https://doi.org/10.1145/3419394.3423622) paper.
+  Parties (https://doi.org/10.1145/3419394.3423622) paper.

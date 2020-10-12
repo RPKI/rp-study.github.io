@@ -60,6 +60,8 @@ body {
   $.getJSON('corr.json', function (chart) {
 		Highcharts.chart('plotcorr', chart);
 	});
+  $.getJSON('soft.json', function (chart) {
+        Highcharts.chart('plotsoft', chart);
   //$.getJSON('daytoday.json', function (chart) {
    // Highcharts.chart('plotdaytoday', chart);
 	//});
@@ -130,6 +132,8 @@ On this page you find all artifacts of the <a href="https://conferences.sigcomm.
 <h3 id="activity">RP Activity by Synchronization Protocol</h3>
 <div id="plotcorr" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
+<h3 id="software">RP Software Usage</h3>
+<div id="plotsoft" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
 <h2 id="contact">Behind this study</h2>
 <p>
